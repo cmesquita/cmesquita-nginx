@@ -16,6 +16,7 @@ file replaced to set up unicorn and custom access log format: nginx.conf.erb
 upstream unicorn {
  server unix:/tmp/.unicorn.sock fail_timeout=0;
 }
+
 2)
 log_format   wimdu '$remote_addr - $remote_user [$time_local]  $status ' log_format   main '$remote_addr - $remote_user [$time_local]  $status ' '"$http_user_agent" "$http_x_forwarded_for" ';
 
